@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
+import { Col, Container, Row, Spinner, Table } from 'react-bootstrap';
+import './ManageOrders.css';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
     const [isDeleted, setIsDeleted] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+
 
 
     // all users order 
     useEffect(() => {
+        setIsLoading(true)
         fetch('https://wicked-caverns-60091.herokuapp.com/orders')
             .then(res => res.json())
-            .then(data => setOrders(data));
+            .then(data => {
+                setOrders(data)
+                setIsLoading(false)
+            });
     }, [isDeleted]);
 
     // DELETE  orders
@@ -37,6 +44,7 @@ const ManageOrders = () => {
 
     // UPDATE status 
     const handleReceive = id => {
+        setIsLoading(true)
         const url = `https://wicked-caverns-60091.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT'
@@ -46,43 +54,65 @@ const ManageOrders = () => {
                 console.log(data)
                 if (data.modifiedCount > 0) {
                     setIsDeleted(true);
+                    setIsLoading(false)
+
                 }
             })
     }
 
+    if (isLoading) {
+        return <Spinner
+            animation="border" variant="danger"
+        />
+    }
+
     return (
-        <div>
-            <h2>Manage orders: {orders.length}</h2>
+        <div className="manage-order">
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <h2 className="manage-heading mb-4">Total orders: {orders.length}</h2>
 
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Package Name</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Ac</th>
-                    </tr>
-                </thead>
-                <tbody>
+                        <Table striped bordered hover size="sm">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Package Name</th>
+                                    <th>User Name</th>
+                                    <th>User Email</th>
+                                    <th>Remove</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                    {
-                        orders.map(order =>
-                            <tr key={order?._id}>
-                                <td>1</td>
-                                <td>{order?.title}</td>
-                                <td>{order?.name}</td>
-                                <td>{order?.email}</td>
-                                <td><button onClick={() => handleCancel(order._id)}>Delete</button></td>
-                                <td><span style={{ color: order?.color }}>{order?.status}</span><button onClick={() => handleReceive(order._id)}>Receive</button></td>
-                            </tr>
-                        )
-                    }
+                                {
+                                    orders.map(order =>
+                                        <tr key={order?._id}>
+                                            <td>1</td>
+                                            <td>{order?.title}</td>
+                                            <td>{order?.name}</td>
+                                            <td>{order?.email}</td>
+                                            <td>
+                                                <button className="delete-btn
+" onClick={() => handleCancel(order._id)}>Delete</button>
+                                            </td>
+                                            <td>
+                                                <span className="custom-status" style={{ backgroundColor: order?.color }}>{order?.status} </span>
+
+                                                <button className="receive-btn" onClick={() => handleReceive(order._id)}>Receive</button></td>
+                                        </tr>
+                                    )
+                                }
 
 
 
-                </tbody>
-            </Table>
+                            </tbody>
+                        </Table>
+                    </Col>
+                </Row>
+            </Container>
+
         </div>
     );
 };

@@ -1,6 +1,32 @@
 .my-order{
     font-family: 'Montserrat', sans-serif;
 }
-img.order-image {
-    height: 222px;
+.my-order img.order-image {
+    height: 240px;
+}
+.my-order .order-title {
+    font-weight: 700;
+    font-size: .8rem;
+}
+.my-order .order-price {
+    font-weight: 600;
+    font-size: .9rem;
+}
+.my-order .order-status{
+    font-weight: 600;
+    font-size: .9rem;
+}
+.my-order .custom-status {
+    color: #fff;
+    padding: 0.3rem;
+    border-radius: 30px;
+    font-size: .7rem;
+}
+.my-order .order-btn {
+    border: 1px solid #ffcc05;
+    background: #303030;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: .2rem .5rem;
 }

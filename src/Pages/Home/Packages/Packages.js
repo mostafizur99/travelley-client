@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row, Spinner } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import './Packages.css';
 
 const Packages = () => {
     const [packages, setPackages] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+
 
     // load all packages from database 
     useEffect(() => {
+        setIsLoading(true)
         fetch('https://wicked-caverns-60091.herokuapp.com/packages')
             .then(res => res.json())
-            .then(data => setPackages(data));
+            .then(data => {
+                setPackages(data)
+                setIsLoading(false)
+            });
     }, []);
 
     const history = useHistory()
@@ -18,7 +25,11 @@ const Packages = () => {
         history.push(`/booking/${bookingId}`);
     }
 
-
+    if (isLoading) {
+        return <Spinner
+            animation="border" variant="danger"
+        />
+    }
 
     return (
         <div className="packages">

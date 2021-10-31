@@ -1,0 +1,37 @@
+.manage-order{
+    padding: 4rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.manage-order .manage-heading{
+    font-weight: 700;
+}
+.manage-order .delete-btn {
+    border: none;
+    padding: 0.4rem .6rem;
+    color: #dc3545;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    font-size: .8rem;
+    background: #30303026;
+}
+.manage-order .receive-btn {
+    border: none;
+    padding: 0.4rem .6rem;
+    color: #303030;
+    background: #30303026;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    font-size: .8rem;
+}
+.manage-order span.custom-status {
+    font-size: .65rem;
+    padding: .4rem .5rem;
+    border-radius: 30px;
+    color: #fff;
+    margin-right: 1rem;
+}
+.manage-order table{
+    font-weight: 600;
+}

@@ -76,6 +76,10 @@ const Booking = () => {
                                 <input  {...register("title")} placeholder="Package title" defaultValue={singlePackage.title} />
                                 {errors.title && <span>This field is required</span>}
 
+                                <label>Price($)</label>
+                                <input  {...register("price")} placeholder="Price" defaultValue={singlePackage.price} />
+                                {errors.price && <span>This field is required</span>}
+
                                 <input type="hidden"  {...register("imgThumb")} defaultValue={singlePackage.imgThumb} />
 
                                 <label>Your Address to Contact</label>
