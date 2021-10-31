@@ -22,8 +22,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                         <Nav className="fw-bold align-items-center">
                             <Nav.Link className="nav-item" as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link className="nav-item" as={Link} to="/addPackage">Add Package</Nav.Link>
-                            <Nav.Link className="nav-item" as={Link} to="/manageOrders">Manage Orders</Nav.Link>
+
 
                             {
                                 !users.email ?
@@ -37,6 +36,8 @@ const Header = () => {
                                         {/* <Navbar.Text className="fst-italic fw-bold">
                                             Signed in as: <a className="nav-item" href="/login">{users.displayName}</a>
                                         </Navbar.Text> */}
+                                        <Nav.Link className="nav-item" as={Link} to="/addPackage">Add Package</Nav.Link>
+                                        <Nav.Link className="nav-item" as={Link} to="/manageOrders">Manage Orders</Nav.Link>
                                         <Nav.Link className="nav-item" as={Link} to="/myOrders">My Orders</Nav.Link>
                                         <span>
                                             <div className="mt-2"><FontAwesomeIcon className="me-1" icon={faUserCircle} /> <span className="nav-user">{users.displayName}</span></div>
