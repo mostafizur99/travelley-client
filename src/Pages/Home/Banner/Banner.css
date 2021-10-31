@@ -1,0 +1,86 @@
+.carousel-item{
+position: relative;
+}
+.carousel-text {
+    /* background: #fff; */
+    color: #fff;
+    position: absolute;
+    bottom: 25%;
+    right: 20%;
+    padding: 1.7rem 2rem;
+    width: 55rem;
+}
+.carousel-text h3 {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 700;
+    /* line-height: 2.8rem; */
+    font-family: 'Mr Dafoe', cursive;
+    letter-spacing: .4rem;
+}
+.carousel-text p {
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.banner-btn {
+    font-size: .7375rem;
+    color: #303030;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ffcc05;
+    transition: .3s;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .3rem;
+}
+.banner-btn:hover {
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid #ffcc05;
+}
+.carousel-indicators {
+    display: none;
+}
+
+/* Tablet Device */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .carousel-text {
+        bottom: 22%;
+        right: 23%;
+        padding: 1rem 1rem;
+        width: 30rem;
+    }
+    .carousel-text h3 {
+        font-size: 3.3rem;
+    }
+    .carousel-text p {
+        font-size: .9rem;
+    }
+}
+
+
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    .carousel-text {
+        bottom: 8%;
+        right: 8%;
+        padding: 1rem 1rem;
+        width: 20rem;
+    }
+    .carousel-text h3 {
+        font-size: 1.7rem;
+    }
+    .carousel-text p {
+        font-size: .6rem;
+        margin-bottom: .5rem;
+    }
+    .banner-btn {
+        font-size: .5375rem;
+        padding: .4rem .6rem;
+    }
+}

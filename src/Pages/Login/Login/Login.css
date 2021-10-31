@@ -1,0 +1,12 @@
+.login{
+    padding: 3rem 0;
+}.login button {
+    border: 1px solid rgba(128, 128, 128, 0.582);
+    /* border: 0; */
+    background: #fff;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+}
+img.googleIcon {
+    width: 60px;
+}

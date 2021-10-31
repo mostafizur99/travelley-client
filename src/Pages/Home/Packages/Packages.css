@@ -1,0 +1,113 @@
+ .section-heading {
+    padding: 3rem 12rem;
+}
+.section-heading h4 {
+    color: #ffcc05;
+    font-family: 'Playfair Display', serif;
+}
+.section-heading h2 {
+    color: #303030;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.section-heading p {
+    color: #595959;
+    margin: 1rem 0;
+}
+.card-container {
+    position: relative;
+}
+.package-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.package-content {
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    text-align: right;
+}
+.package-content h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.package-content h4{
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+.package-btn {
+    position: absolute;
+    top: 40%;
+    right: 23%;
+    font-size: .7375rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .6rem 1.2rem;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #ffcc05;
+    transition: .3s;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .3rem;
+}
+.package-btn:hover{
+    background-color: #303030;
+}
+
+
+/* Tablet Device */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+     .section-heading {
+        padding: 3rem 0rem;
+    }
+    .package-content h3 {
+        font-size: 1rem;
+    }
+    .package-content h4 {
+        font-size: .7rem;
+    }
+    .package-price {
+        font-size: 1rem;
+    }
+    .package-btn {
+        top: 30%;
+        right: 11%;
+        font-size: .6rem;
+        padding: .6rem 0.5rem;
+        letter-spacing: .25rem;
+    }
+}
+
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+     .section-heading {
+        padding: 3rem 0rem;
+    }
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+    .package-content h3 {
+        font-size: 1rem;
+    }
+    .package-content h4 {
+        font-size: .7rem;
+    }
+    .package-price {
+        font-size: 1rem;
+    }
+    .package-btn {
+        top: 30%;
+        right: 11%;
+        font-size: .6rem;
+        padding: .6rem 0.5rem;
+        letter-spacing: .25rem;
+    }
+    
+}
