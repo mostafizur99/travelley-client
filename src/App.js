@@ -16,40 +16,43 @@ import Booking from './Pages/Booking/Booking';
 import MyOrders from './Pages/MyOrders/MyOrders';
 import ManageOrders from './Pages/ManageOrders/ManageOrders';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ScrollToTop from './utilities/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header></Header>
-          <Switch>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <PrivateRoute path="/booking/:bookingId">
-              <Booking></Booking>
-            </PrivateRoute>
-            <PrivateRoute path="/myOrders">
-              <MyOrders></MyOrders>
-            </PrivateRoute>
-            <Route path="/manageOrders">
-              <ManageOrders></ManageOrders>
-            </Route>
-            <Route path="/addPackage">
-              <AddPackage></AddPackage>
-            </Route>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="*">
-              <NotFound></NotFound>
-            </Route>
-          </Switch>
-          <Footer></Footer>
+          <ScrollToTop>
+            <Header></Header>
+            <Switch>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
+              <Route path="/login">
+                <Login></Login>
+              </Route>
+              <PrivateRoute path="/booking/:bookingId">
+                <Booking></Booking>
+              </PrivateRoute>
+              <PrivateRoute path="/myOrders">
+                <MyOrders></MyOrders>
+              </PrivateRoute>
+              <Route path="/manageOrders">
+                <ManageOrders></ManageOrders>
+              </Route>
+              <Route path="/addPackage">
+                <AddPackage></AddPackage>
+              </Route>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="*">
+                <NotFound></NotFound>
+              </Route>
+            </Switch>
+            <Footer></Footer>
+          </ScrollToTop>
         </Router>
       </AuthProvider>
     </div>
