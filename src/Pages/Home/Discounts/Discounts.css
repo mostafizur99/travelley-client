@@ -1,0 +1,77 @@
+.discount-amount{
+position: relative;
+}
+.discount-amount h2 {
+    position: absolute;
+    top: 18%;
+    left: 19%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 10rem;
+    color: #fff;
+}
+.discount-amount h4 {
+    position: absolute;
+    top: 49%;
+    left: 46%;
+    color: #ffcc05;
+    font-family: "Qwigley",cursive;
+    font-size: 6rem;
+}
+.discount-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.discount-text h4{
+    font-family: 'Playfair Display', serif;
+    color: #ffcc05;
+}
+.discount-text p {
+    margin: 2rem 4rem;
+    line-height: 1.8rem;
+    color: #595959;
+}
+
+/* Tablet Device */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .discount-amount h2 {
+        font-size: 6rem;
+    }
+    .discount-amount h4 {
+        top: 53%;
+        font-size: 4rem;
+    }
+    .discount-text h2 {
+        font-size: 2rem;
+    }
+    .discount-text h4 {
+        font-size: 1.2rem;
+    }
+    .discount-text p {
+        margin: 1rem 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    .discount-amount h2 {
+        font-size: 6rem;
+    }
+    .discount-amount h4 {
+        top: 53%;
+        font-size: 4rem;
+    }
+    .discount-text h2 {
+        font-size: 2rem;
+    }
+    .discount-text h4 {
+        font-size: 1.2rem;
+    }
+    .discount-text p {
+        margin: 1rem 1rem;
+        line-height: 1.5rem;
+    }
+   
+}

@@ -1,4 +1,7 @@
- .section-heading {
+.packages{
+padding: 4rem 0 7rem 0;
+}
+.section-heading {
     padding: 3rem 12rem;
 }
 .section-heading h4 {
@@ -87,6 +90,9 @@
 
 /* Mobile Device */
 @media only screen and (max-width:688px) {
+    .packages {
+        padding: 0rem 0 7rem 0;
+    }
      .section-heading {
         padding: 3rem 0rem;
     }
