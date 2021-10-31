@@ -11,7 +11,7 @@ const Banner = () => {
                 <Carousel.Item className="carousel-item">
                     <img
                         className="d-block w-100"
-                        src="https://i.ibb.co/18Kj91V/banner2.jpg"
+                        src="https://i.ibb.co/4p7FwKX/banner20.jpg"
                         alt="First slide"
                     />
                     <div className="carousel-text">
