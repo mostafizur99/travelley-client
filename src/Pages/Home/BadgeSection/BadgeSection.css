@@ -1,0 +1,48 @@
+.badge-section {
+    background: #8080800f;
+    padding: 2.5rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.badge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.badge-icon-wrap {
+    width: 5rem;
+    height: 5rem;
+    background: orange;
+    border-radius: 50%;
+    line-height: 6rem;
+}
+.badge-icon {
+    font-size: 2rem;
+    color: #fff;
+}
+.badge-text h4 {
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.badge-text p {
+    color: #595959;
+}
+/* Tablet Device */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .badge-text h4 {
+        font-size: 1rem;
+    }
+    .badge-text p {
+        color: #595959;
+        font-size: .9rem;
+    }
+}
+
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    .badge-container {
+        margin-bottom: 2rem;
+        padding: 0 3rem;
+    }
+   
+}
